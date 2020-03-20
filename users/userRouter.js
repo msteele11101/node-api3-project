@@ -7,6 +7,7 @@ router.post('/', (req, res) => {
   users
 		.insert(req.body)
 		.then(newUser => {
+      const messageOfTheDay = process.env.MOTD || 'Hello World!'
 			res.status(201).json(newUser);
 		})
 		.catch(err => {
