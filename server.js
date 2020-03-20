@@ -17,7 +17,7 @@ server.use('/api/users', userRouter);
 
 
 server.get('/', (req, res) => {
-  const Greeting = process.env.MOT
+  const Greeting = process.env.MOTD
   res.send(`${Greeting}`);
 });
 
